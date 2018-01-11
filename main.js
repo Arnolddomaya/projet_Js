@@ -3,6 +3,7 @@ let centre = document.getElementById("elemCentre");
 let bouton = document.getElementById("click");
 
 
+
 //Dans cette fonction on fait apparaitre les elements centraux
 // et disparaitre le bouton "click"
 function apparition(){
@@ -18,12 +19,16 @@ function google(){
 }
 
 function redir(){
-  let nmbr= document.monformulaire.recherche.value;
-  let adress="https://www.google.fr/";
-  google;
-}
-setTimeout(popUp,3000);
+  let nmbr1= document.monformulaire.recherche.value;
+  nmbr= nmbr1.split(" ").join('+');
+  let adress="https://www.google.fr/search?q="+nmbr;
+  alert(adress);
+  alert("Petit soucis: \n Vous ne pouvez pas être redirigé vers "+adress);
+  self.location=adress;
 
+
+}
+setTimeout(popUp,10000);
 function popUp(){
   alert("Viens faire un petit tour sur mon site!!!!");
  }

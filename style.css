@@ -92,6 +92,7 @@ body {
 
 #base {
   margin-top: 100px;
+  justify-content: flex-end;
 }
 
 a.lien-footer {
